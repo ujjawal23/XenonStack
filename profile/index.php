@@ -1,5 +1,17 @@
 <?php
 include "../includes/header.php";
+include "../includes/db.php";
+$uid=$_SESSION['uid'];
+if(isset($_SESSION['uid'])){
+    $user="SELECT * FROM `user` WHERE `uid`='$uid'";
+
+    $user_run=mysqli_query($conn,$user);
+    if(mysqli_num_rows($user_run)>0){
+       foreach($user_run as $user){
+
+     
+
+
 ?>
 <style>/* Import Font Dancing Script */
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script);
@@ -173,12 +185,12 @@ hr {
             <tr>
               <td>Name</td>
               <td>:</td>
-              <td>Ujjawal</td>
+              <td><?php echo $user['name'] ?></td>
             </tr>
             <tr>
               <td>Email</td>
               <td>:</td>
-              <td>ujju@gmail.com</td>
+              <td><?php echo $user['email'] ?></td>
             </tr>
 
           </tbody>
@@ -186,3 +198,8 @@ hr {
       </div>
     </div>
 </div>
+<?php
+  }
+}
+}
+?>
