@@ -55,7 +55,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 $_SESSION['uid'] = $row['uid'];
 
                     
-                            header("Location: home");
+                            header("Location: products");
                             exit();
 
 
