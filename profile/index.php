@@ -187,6 +187,11 @@ hr {
               <td>:</td>
               <td><?php echo $user['name'] ?></td>
             </tr>
+              <tr>
+              <td>Phone</td>
+              <td>:</td>
+              <td><?php echo $user['phone'] ?></td>
+            </tr>
             <tr>
               <td>Email</td>
               <td>:</td>
