@@ -203,3 +203,49 @@ hr {
 }
 }
 ?>
+
+<style>.th,
+      .td {
+        border: 2px solid #666;
+      }
+      table.t1 {
+        table-layout: fixed;
+        width: 40%;
+      }</style>
+
+<div class="main">
+    <h2>IDENTITY</h2>
+    <table class="t1">
+      <tr>
+        <th class="th">Name</th>
+        <th class="th">Email</th>
+        <th class="th">phone</th>
+        <th class="th">Message</th>
+      </tr>
+      <?php
+      if(isset($_SESSION['uid'])){
+    $feedback="SELECT * FROM `feedback` WHERE `uid`='$uid'";
+
+    $feedback_run=mysqli_query($conn,$feedback);
+    if(mysqli_num_rows($feedback_run)>0){
+       foreach($feedback_run as $feedback){
+
+     
+
+
+?>
+      <tr>
+        <td class="td"><?php echo $feedback['name']?></td>
+        <td class="td"><?php echo $feedback['email']?></td>
+        <td class="td"><?php echo $feedback['phone']?></td>
+        <td class="td"><?php echo $feedback['msg']?></td>
+
+
+      </tr>
+      <?php
+       }
+    }
+}?>
+    
+    </table>
+</div>
