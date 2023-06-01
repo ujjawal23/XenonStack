@@ -3,7 +3,7 @@
 session_start(); 
 
 
-include "..\includes/db.php";
+include "../includes/db.php";
 $mobile=$_POST['phone'];
 $email=$_POST['email'];
 $uname=$_POST['name'];
@@ -11,7 +11,6 @@ $pass=$_POST['password'];
 
 
 if (empty($_POST['name'] || $_POST['email'] || $_POST['phone'] || $_POST['password'])) {
-    // One or more values are empty.
     echo' <script>alert("Please complete the registration form!")
     history.back()
     </script>';
