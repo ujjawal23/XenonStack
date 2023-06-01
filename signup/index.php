@@ -6,7 +6,7 @@
 
 <div class="parent clearfix">
     <div class="bg-illustration">
-      <img src="https://i.ibb.co/Pcg0Pk1/logo.png" alt="logo">
+      <img src="https://logomaker.designfreelogoonline.com/media/productdesigner/logo/resized/000749_online_store_logos_design_free_online_E-commerce_cart_logo_maker-02.png" alt="logo">
       <link rel="stylesheet" href="../style.css">
   
       <div class="burger-btn">
