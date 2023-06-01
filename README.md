@@ -71,7 +71,7 @@
 ## ScreenShots Of the Project
 
 ## Login Page
-![1](https://github.com/ujjawal23/XenonStack/blob/main/screenshots/Screenshot%202023-06-01%20093331.jpg?raw=true)
+![1]((https://github.com/ujjawal23/XenonStack/assets/78785865/c4e0841c-e5b4-4d85-93e8-6c705eccee68)
 ## Sign-up Page
 ![2](https://github.com/ujjawal23/XenonStack/blob/main/screenshots/signup.jpg)
 ## Landing Page After Login
