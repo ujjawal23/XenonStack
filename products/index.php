@@ -1,5 +1,7 @@
 <?php
 include "../includes/header.php";
+include "../includes/db.php";
+
 ?>
 
 <style>
@@ -62,48 +64,31 @@ img{
 </style>
 
 <div class="row">
+    <?php
+     $product = "SELECT * FROM `products` ";
+            $product_run=mysqli_query($conn,$product);
+            if(mysqli_num_rows($product_run)>0){
+                foreach($product_run as $product)
+                {
+                    ?>
   <div class="column">
     <div class="card">
-    <h2> Iphone
+    <h2> <?php echo $product["name"];?>
         </h2>
         <br>
-        <img src="../img/iphone.webp" alt="">
+        <img src="<?php echo $product['photo'] ?>" alt="">
         <br>
         <h4> 
-            $25
+            $<?php echo $product["price"];?>
         </h4>
-        <button name="buy now" type="submit" id="1" >Buy Now</button>
+        <a href="../cart?id=<?php echo $product["id"];?>"> <button name="buy now" type="submit" >Buy Now</button></a>
 
     </div>
   </div>
-  <div class="column">
-    <div class="card">
-    <h2> Mac-Book
-        </h2>
-        <br><br>
-        <img src="../img/mac.jpeg" alt="">
-        <br>
-        <h4> 
-            $25
-        </h4>
-        <button name="buy now" type="submit" id="2" >Buy Now</button>
-       
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-    <h2> I-Watch
-        </h2>
-        <br>
-        <img src="../img/iwatch.jpeg" alt="">
-        <br>
-        <h4> 
-            $25
-        </h4>
-        <button  name="buy now" type="submit" id="3" >Buy Now</button>
-
-    </div>
-  </div>
+  <?php
+                }
+            }
+  ?>
  
 </div>
 
